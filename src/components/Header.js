@@ -13,9 +13,10 @@ import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import PowerSettingsNewIcon from "@material-ui/icons/PowerSettingsNew";
 import SearchIcon from "@material-ui/icons/Search";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "#fff",
+    transform: "translateZ(0)",
   },
   searchInput: {
     opacity: "0.6",
@@ -26,9 +27,9 @@ const useStyles = makeStyles({
     backgroundColor: "#e5e5e5",
   },
   "& .MuiSvgIcon-root": {
-    marginRight: "8px",
+    marginRight: theme.spacing(1),
   },
-});
+}));
 
 function Header() {
   const classes = useStyles();
